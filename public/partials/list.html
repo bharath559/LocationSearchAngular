@@ -1,0 +1,28 @@
+<div class="container-fluid">
+
+	
+	<div id="loaderDiv" ng-show="ajaxLoader">
+    	<img src="../img/ajax-loader.gif" class="ajax-loader"/>
+	</div>
+	<div class="row">
+		<input type="text" placeholder="Search below list"  ng-model="searchList"/>
+	</div>
+	<div class="row">
+	
+    	<table class="table table-hover table-striped">
+  	 	   <thead>
+  		 	  <tr><th>Icon</th><th>Place Name</th><th>Address</th></tr>
+  	 	   </thead>
+      	 <tbody>
+        	 <tr  ng-repeat="eachLocation in searchData | filter:searchList" style="cursor:pointer">
+          
+		  	   <td><img src="{{eachLocation.icon}}"></img></td>
+		  	   <td>
+           			<a href="#/locations/{{eachLocation.place_id}}">{{ eachLocation.name }} </a>
+          	   </td>
+          	  <td>{{ eachLocation.vicinity }}</td>
+        	</tr>
+      	</tbody>
+       </table>
+	</div>	
+</div>

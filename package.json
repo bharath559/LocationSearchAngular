@@ -1,0 +1,22 @@
+{
+  "name": "LOCATIONSEARCH",
+  "version": "1.0.0",
+  "description": "A MEAN app that allows users to search using zip/address",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mongodb": "^2.1.6",
+	"google-locations":"*",
+	"bower": "^1.6.5",
+	"https":"*"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install"
+  }
+  
+}

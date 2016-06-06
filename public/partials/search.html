@@ -1,0 +1,18 @@
+	<div id="searchView" ng-controller="SearchController">
+	    <div class="container">
+	        <h2>Zip Code/Address Search</h2>
+	        <div class="panel panel-default" style="float: right">
+	           
+			   <div class="panel-body">
+   			    	<form class="form-inline" name="searchFrm" novalidate>
+   	                	<input type="text" name="zip" placeholder="Enter your zip code/address" required  ng-model="zipCode">
+   	                	<input type="submit" class="btn btn-primary" value="Search" ng-disabled="searchFrm.$invalid" ng-click="searchZipCode(zipCode)">
+   	            	</form>
+			   </div>
+			  
+	        </div>
+	    </div>
+		<div load-list ng-hide="!searchData.length"> </div>
+	</div>
+  
+   </div>
